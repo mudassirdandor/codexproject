@@ -216,7 +216,7 @@ Set up Vite with React and TypeScript; add the approved styling, animation, and 
 ### Issues / Risks
 
 - Git reports repository ownership as different from the sandbox user; Git commands must use a per-command safe-directory override in this environment.
-- Git status/commit: Git was initialized. No initial commit was created because this environment has no configured Git user name or email, and no author identity was inferred.
+- Git status/commit: Git repository initialized; initial commit successfully created and pushed to GitHub `origin/main`; local `main` tracks `origin/main`.
 - `pnpm list --depth 0` could not open the package-manager cache SQLite database in this environment; this did not affect the completed `pnpm typecheck` or `pnpm build` checks.
 
 ### Handoff
