@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Tooling and operating-system files
+*.local
+.DS_Store
+Thumbs.db
+*.tsbuildinfo
