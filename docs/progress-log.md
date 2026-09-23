@@ -81,8 +81,6 @@ Operational documentation is ready. Do not begin implementation until a separate
 
 `COMPLETED`
 
----
-
 ## YYYY-MM-DD — Phase / Task
 
 ### Agent
@@ -222,6 +220,79 @@ Set up Vite with React and TypeScript; add the approved styling, animation, and 
 ### Handoff
 
 The project foundation is ready for the approved design-foundation and global-layout phase. Keep all six portfolio specifications authoritative and implement no portfolio section without a scoped task.
+
+### Status
+
+`COMPLETED`
+
+---
+
+## 2026-09-23 — Milestone 1 / Design Foundation
+
+### Agent
+
+Lead Architect / Frontend Engineer, with UI/UX Design and Content & Data Integrity review
+
+### Objective
+
+Establish the visual, responsive, motion, and accessibility foundation without implementing portfolio sections.
+
+### Source Documents
+
+- `docs/design-system.md`
+- `docs/portfolio-brief.md`
+- `docs/development-plan.md`
+- `docs/content.md`
+- `docs/personal-profile.md`
+- `docs/projects.md`
+- `docs/agents.md`
+- `docs/agent-workflow.md`
+
+### Repository Context
+
+The Vite React foundation was operational with an intentionally empty page shell and no portfolio sections.
+
+### Plan
+
+Add the approved dark analytical design tokens, typography loading, layout primitives, responsive gutters/grid, focus treatment, and reduced-motion behavior; keep all page content absent.
+
+### Actions Taken
+
+- Added the approved Space Grotesk, Inter, and JetBrains Mono font families as self-hosted package assets.
+- Expanded global tokens for semantic colors, typography, spacing, radius, motion, container width, and responsive gutters.
+- Added reusable `Container` and `SectionFrame` layout primitives.
+- Added global focus-visible, touch, overflow, and reduced-motion foundations.
+- Reviewed content guardrails to ensure no unverified portfolio content was introduced.
+
+### Files Created / Modified
+
+- `index.html`
+- `src/styles/globals.css`
+- `src/components/layout/Container.tsx`
+- `src/components/layout/SectionFrame.tsx`
+- `docs/progress-log.md`
+
+### Decisions
+
+- Use self-hosted font packages for the approved typefaces to avoid render-time third-party font requests and preserve production control.
+- Keep all layout primitives content-neutral until the Application Shell milestone.
+
+### Verification
+
+- Build: PASS — TypeScript project build and Vite production build completed successfully.
+- Tests: NOT RUN — no test suite exists.
+- Responsive check: PASS — responsive container gutters and desktop grid activation are defined without content-specific layouts.
+- Accessibility check: PASS — global visible focus treatment and reduced-motion behavior are implemented.
+- Performance check: PASS — no imagery, canvas, WebGL, or additional runtime dependency was introduced.
+- Content integrity review: PASS — no portfolio copy, project claims, or unverified content was added.
+
+### Issues / Risks
+
+- The `pnpm` wrapper intermittently stalls in this environment; verification used the installed TypeScript and Vite binaries directly.
+
+### Handoff
+
+Proceed to Milestone 2: build the application shell, accessible navigation, mobile navigation, and footer foundation using these primitives. Do not introduce portfolio sections yet.
 
 ### Status
 
